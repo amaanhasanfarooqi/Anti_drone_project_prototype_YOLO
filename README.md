@@ -25,7 +25,7 @@ This is a **real-time AI-powered anti-drone surveillance prototype** that:
 4. **Neutralises** the target by activating a spark-generation module when TARGET LOCK is achieved
 
 > 🎓 **B.Tech Final Year Project** — Department of Mechanical Engineering, Jamia Millia Islamia, New Delhi (2025–26)  
-> 👨‍💻 Submitted by: Vikas, Afaaf Siddiqui, Amaan Hasan Farooqi, Mohammad Sahil Khan  
+> 👨‍💻 Submitted by: Amaan Hasan Farooqi and team
 > 🧑‍🏫 Supervisor: Prof. Mohd Suhaib
 
 ---
