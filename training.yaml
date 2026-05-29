@@ -1,0 +1,40 @@
+# ============================================================
+# Anti-Drone YOLOv8 — Training Hyperparameters
+# ============================================================
+# Reference for model.train() arguments.
+# Used by src/train.py.
+# ============================================================
+
+# ── Model ────────────────────────────────────────────────────
+model: yolov8n.pt          # Nano — fastest, smallest
+# model: yolov8s.pt        # Small — better accuracy, needs more RAM
+# model: yolov8m.pt        # Medium — best accuracy, GPU required
+
+# ── Dataset ──────────────────────────────────────────────────
+data: configs/data.yaml
+
+# ── Training ─────────────────────────────────────────────────
+epochs:   50               # Increase to 100 for better results
+imgsz:    416              # 640 for better accuracy (needs more VRAM)
+batch:    8                # Reduce to 4 if OOM / CPU only
+workers:  2
+patience: 10               # Early stopping after N epochs with no improvement
+cache:    false            # Set true if RAM > 8GB for faster training
+
+# ── Augmentation ─────────────────────────────────────────────
+fliplr:   0.5              # Horizontal flip probability
+flipud:   0.0              # Vertical flip (disable for aerial views)
+mosaic:   1.0              # Mosaic augmentation
+hsv_h:    0.015            # Hue jitter
+hsv_s:    0.7              # Saturation jitter
+hsv_v:    0.4              # Brightness jitter
+degrees:  5.0              # Random rotation ±5°
+scale:    0.5              # Scale jitter
+
+# ── Saving ───────────────────────────────────────────────────
+save: true
+name: anti_drone_final
+
+# ── Output ───────────────────────────────────────────────────
+# Best model saved at: runs/detect/anti_drone_final/weights/best.pt
+# Training plots at  : runs/detect/anti_drone_final/results.png
