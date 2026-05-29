@@ -1,0 +1,44 @@
+# ============================================================
+# Anti-Drone YOLOv8 — Dataset Configuration
+# ============================================================
+# This file is read by YOLOv8 during training and evaluation.
+# Update the paths below to match your downloaded dataset.
+#
+# OPTION A: Downloaded from Roboflow (recommended)
+#   - dataset_utils.py auto-generates this file
+#   - Update the path below to match your Roboflow download folder
+#
+# OPTION B: Custom dataset
+#   - Organise as:
+#       dataset/
+#         train/images/*.jpg
+#         train/labels/*.txt   (YOLO format)
+#         valid/images/*.jpg
+#         valid/labels/*.txt
+# ============================================================
+
+# ── Dataset paths ────────────────────────────────────────────
+# Change this to your actual dataset location:
+path: ../dataset                    # root directory of dataset
+
+train: train/images                 # relative to 'path'
+val:   valid/images                 # relative to 'path'
+# test: test/images                 # optional
+
+# ── Classes ──────────────────────────────────────────────────
+nc: 1                               # number of classes
+
+names:
+  - drone                           # class 0
+
+# ── Notes ────────────────────────────────────────────────────
+# YOLO annotation format (per .txt label file):
+#   <class_id> <cx> <cy> <width> <height>
+#   All values normalised to [0, 1] relative to image size
+#
+# Example line in label file:
+#   0 0.512 0.345 0.124 0.089
+#
+# Roboflow Workspace: project-986i8
+# Roboflow Project  : drone-uskpc
+# Roboflow Version  : 1
