@@ -1,0 +1,32 @@
+# ============================================================
+# Anti-Drone YOLOv8 System — Requirements
+# ============================================================
+
+# Core AI / ML
+ultralytics>=8.0.0         # YOLOv8 framework
+torch>=2.0.0               # PyTorch backend
+torchvision>=0.15.0        # Vision utilities
+
+# Computer Vision
+opencv-python>=4.8.0       # Webcam + image processing
+
+# Dataset
+roboflow>=1.1.0            # Roboflow dataset download
+
+# Hardware Communication
+pyserial>=3.5              # Serial communication with Arduino
+
+# Data & Visualisation
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+pandas>=2.0.0
+Pillow>=9.5.0
+tqdm>=4.65.0
+
+# Config
+pyyaml>=6.0
+
+# Notebooks
+jupyterlab>=4.0.0
+ipywidgets>=8.0.0
